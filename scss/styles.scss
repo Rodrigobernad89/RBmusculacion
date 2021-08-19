@@ -1,0 +1,546 @@
+@import '_variables';
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+@each $pagina,$image in $paginas{
+    .body#{$pagina}{
+    background-image:$image;
+    background-size: cover;
+    min-height: 100vh;
+    }
+}
+.contenedorNav{
+    background-color:black;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:15vh;
+}
+
+.contenedorNav .logotipo{
+    color:white;
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;  
+    font-size:20px;
+    margin:40px;
+}
+
+.contenedorNav .logotipo:hover{
+    color:white;
+}
+
+
+.navbar-light .navbar-toggler{
+    background-color:white;
+    border-color:white;
+}
+
+.navbar-light .navbar-toggler .navbar-toggler-icon{
+    color:white;
+}
+
+.contenedorNav .navLink{
+    transition:all 1s;
+}
+
+.contenedorNav .navLink:hover{
+    margin:30px;
+    transform:translateX(10px) scale(1.5,1.5);
+
+}
+
+.contenedorNav .navLink .linkers{
+    color: white;
+}
+
+.contenedorNav .navLink .linkers2{
+    color: black;
+}
+
+.contenedorNav .navLink .linkers:hover{
+    color:yellow;
+}
+
+#logo a{
+    color:white;
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;  
+    font-size:20px;
+    margin:40px;
+    
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+
+#navList{
+    list-style: none;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* align-items: center; */
+   /*  padding-top:40px;  */
+    /* display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(1,1fr);
+    justify-content: space-between; */
+}
+
+#navList li{
+    transition:all 1s;
+}
+
+#navList li:hover{
+    transform:translateX(10px) scale(1.5,1.5);
+}
+
+#navList li a{
+    background-color: black;
+    color:white;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    /* margin:40px; */  
+}
+
+#navList li a:hover{
+    color:rgb(146, 138, 138);
+    background-color: green;
+}
+
+#navList li ul{
+    position: absolute;
+    display: none;
+    float: center;
+    min-width:200px;
+
+}
+
+#navList li ul li{
+    display:block
+}
+
+#navList li:hover ul{
+    display:block;
+}
+
+main{
+    margin-top:70px;
+}
+
+#footer{
+    background-color:black;
+    background-image:linear-gradient(black,white);
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+    height:15vh;
+}
+
+/* #contenedorDerechos{
+    display:inline-block;
+} */
+
+.derechos__parrafo{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.redes{
+    list-style: none;
+    display:flex;
+    /* justify-content:flex-end; */
+    .redes__logo a{
+        color:white;
+        text-decoration:none;
+        font-family: 'Roboto', sans-serif;
+        font-size:20px;
+        padding:10px;
+        i{
+            transition:all 10s;
+            
+        }
+    }
+}
+
+
+
+
+.redes__logo a i:hover{
+    transform:rotate(360deg);
+}
+
+
+
+/* #listaRedes li{
+    display:inline-block;
+} */
+
+/* .redes__logo a{
+    color:white;
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+    font-size:20px;
+    padding:10px;
+}
+
+.redes__logo a i{
+    transition:all 10s;
+}
+.redes__logo a i:hover{
+    transform:rotate(360deg);
+} */
+
+.carouselContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel{
+    width:90%;
+}
+
+.titulo__principal{
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-size:48px;
+    text-align:center;
+    margin-top:140px;
+    margin-bottom:100px; 
+   
+}
+
+.slider{
+    width:90%;
+    margin:0 auto;
+}
+
+.slider img{
+    width:100%;
+  /*   margin-left:80px; */
+}
+.titulo__secundario{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight:bold;
+    font-size:32px;
+    padding-left: 20px;
+    margin-top:20px;
+    padding-top:20px;
+    padding-bottom:40px;
+}
+
+.destacados{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight:bold;
+    font-size:32px;
+    padding-left: 20px;
+    margin-top:20px;
+    padding-top:20px;
+    padding-bottom:40px;
+    text-align: center;
+}
+
+.nuestros{
+    text-align: center;
+}
+
+.destacado__nombre{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size:24px;
+}
+
+
+.destacado__precio{
+    color:yellow;
+}
+
+.somos__parrafo{
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size:20px;
+    letter-spacing: 3px;
+    padding:20px;
+    opacity:1;
+}
+
+.preguntas__pregunta{
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-weight:bold;
+    font-size:20px;
+    padding:20px;
+}
+
+.preguntas__respuesta{
+    color:white;
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-size:16px;
+    letter-spacing:1px;
+    padding:20px;
+
+}
+
+.contacto__campo{
+    font-family: 'Raleway', sans-serif;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.productosDestacados{
+    padding-top:30px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(1,1fr);
+    gap:20px;
+    margin:20px;
+}
+
+.destacado{
+    display:inline-block;
+    /* width:30%; */
+    margin-bottom:50px;
+    transition: all 10s;
+}
+
+.destacado:hover{
+    transform: translateY(100px);
+}
+
+.destacado__img{
+    width:100%;
+    height:60vh;
+}
+
+
+.tabla{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition:all 10s;
+}
+
+.tabla:hover{
+    transform: skew(15deg);
+}
+
+.tabla table{
+    width:($ancho/2) - numero;
+    color:white;
+}
+
+.institucional{
+    width:100%;
+}
+
+.institucional iframe{
+    height:70vh;
+    width:$ancho - 10;  
+    margin-top:70px;
+    margin-left:70px; 
+}
+
+.listasProductos{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(2,1fr);
+    gap:20px;
+    margin:30px;
+    transition:all 10s;
+    overflow: hidden;
+    
+}
+
+/* .listaProductos1{
+    display:inline;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1,1fr);
+    gap:20px;
+    margin:30px;
+    transition:all 10s;
+    overflow: hidden;
+
+} */
+
+/* .listaProductos2{
+    display:inline;
+   display:grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-template-rows: repeat(1,1fr);
+   gap:20px;
+   margin:30px;
+   transition:all 10s;
+} */
+
+
+.producto:hover {
+    /* display: inline-block;
+    width:30%;
+    margin:20px; */
+    background:gray;
+} 
+
+
+/* .listaProductos2 article{
+    display:inline-block;
+    width:30%;
+    height:50vh;
+    margin:20px;
+} */
+
+.producto__nombre{
+    display:none;
+    @if$title == 'primario'{
+    color:white;
+    }else{
+        color:black;
+    };
+    font-family: 'Roboto', sans-serif;
+    font-size:24px;
+}
+
+.producto__precio{
+    display:none;
+    color:yellow;
+}
+
+.producto:hover .producto__nombre{
+    display:block;
+    font-size: 30px;
+}
+
+.producto:hover .producto__precio{
+    display:block;
+    font-size:25px;
+}
+
+.producto__img{
+    @extend.destacado__img; 
+}
+
+.contenedorContacto .titulo__secundario{
+    text-align: center;;
+}
+.formularioContacto{
+    display:flex;
+    flex-direction:column;
+    /* grid-template-columns: repeat(1,300px);
+    grid-template-rows: repeat(5,150px); */
+    justify-content: center;
+    align-items: center;
+    /* gap:10px; */
+    /* border:1px solid black; */
+    /* padding:20px; */
+}
+
+.contacto{
+    color:white;
+    display:grid;
+    grid-template-columns: repeat(2,300px);
+    grid-template-rows: repeat(1,1fr);
+    gap:20px;
+    justify-content:flex-start;
+    align-items: center;
+    padding:20px;
+
+}
+
+.contenedorQuienesSomos{
+    height:100vh;
+}
+
+.contacto__input{
+    transition:all 2s;
+}
+.contacto__input:focus{
+    width:200px;
+    font-size: 24px;;
+}
+
+
+
+@media (max-width:1024px){
+    .producto__nombre{
+        display:block;
+    }
+    
+    .producto__precio{
+        display:block;
+    }
+    
+    .producto:hover .producto__nombre{
+        display:none;
+        font-size: 30px;
+    }
+    
+    .producto:hover .producto__precio{
+        display:none;
+        font-size:25px;
+    }
+}
+
+@media (max-width:768px){ 
+    .institucional iframe{
+        width:80%;
+       margin-left:0 auto;
+    }
+    .tabla{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .listasProductos{
+        grid-template-columns:repeat(2,1fr) ;
+    }
+
+    .contacto{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .contenedorQuienesSomos{
+        height:150vh;
+    }
+
+}
+
+@media (max-width:600px){    
+    .productosDestacados{
+        grid-template-columns:repeat(1,1fr);
+    } 
+    .listasProductos{
+        grid-template-columns:repeat(1,1fr) ;
+    }
+}
+
+@media (max-width:480px){
+
+    #footer{ 
+        flex-direction: column;   
+    }
+
+}
+
+
