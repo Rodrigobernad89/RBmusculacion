@@ -52,13 +52,14 @@
 .navbar-light .navbar-toggler .navbar-toggler-icon {
   color: white; }
 
-.contenedorNav .navLink {
-  transition: all 1s; }
+/* .contenedorNav .navLink{
+    transition:all 1s;
+} */
+/* .contenedorNav .navLink:hover{
+    margin:30px;
+    transform:translateX(10px) scale(1.5,1.5);
 
-.contenedorNav .navLink:hover {
-  margin: 30px;
-  transform: translateX(10px) scale(1.5, 1.5); }
-
+} */
 .contenedorNav .navLink .linkers {
   color: white; }
 
