@@ -55,7 +55,7 @@
 } */
 
 .contenedorNav .navLink .linkers{
-    color: white;
+    color: white !important;
 }
 
 .contenedorNav .navLink .linkers2{
@@ -63,7 +63,7 @@
 }
 
 .contenedorNav .navLink .linkers:hover{
-    color:yellow;
+    color:yellow !important;
 }
 
 #logo a{
@@ -140,7 +140,7 @@ main{
     margin-top:70px;
 }
 
-#footer{
+/* #footer{
     background-color:black;
     background-image:linear-gradient(black,white);
     text-align: center;
@@ -151,6 +151,72 @@ main{
     align-items:center;
     height:15vh;
 }
+ */
+
+ #footer{
+    background-color:black;
+    /* background-image:linear-gradient(white,black)); */
+    margin-top:30px;
+    padding-top:50px;
+ }
+.principioFooter{
+    background-color: black;
+    background-image:linear-gradient(black,white);
+    margin:20px;
+    padding:10px;
+    /* border:3px solid yellow; */
+}
+
+
+.principioFooter .newsletter{
+    text-align:center;
+    color:white;
+    padding:10px;
+}
+
+
+
+.contactoNewsletter{
+    color:white;
+    display:grid;
+    grid-template-columns: repeat(2,300px);
+    grid-template-rows: repeat(1,1fr);
+    gap:20px;
+    justify-content:center;
+    align-items: center;
+    padding:20px;
+}
+
+.contactoNewsletter__input{
+    padding:10px;
+    width:700px;
+    border-radius: 10px;
+}
+
+.contactoNewsletter__boton{
+    width:100px;
+    text-align:center;
+    background-color:blue;
+    color:white;
+    border-radius: 10px;
+    padding:10px;
+    margin-left:250px;
+}
+
+.finalFooter{
+  /*   background-color:black;
+    background-image:linear-gradient(black,white); */
+    text-align: center;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+    margin-top:30px;
+    padding:30px;
+    /* height:15vh; */
+}
+
 
 /* #contenedorDerechos{
     display:inline-block;
@@ -267,11 +333,14 @@ main{
     color:white;
     font-family: 'Roboto', sans-serif;
     font-size:24px;
+    padding-top:10px;
+    padding-left:10px;
 }
 
 
 .destacado__precio{
     color:yellow;
+    padding-left:10px;
 }
 
 .somos__parrafo{
@@ -308,6 +377,16 @@ main{
     font-size:16px;
 }
 
+
+.contacto__boton{
+    background-color:blue;
+    color:white;
+    width:100px;
+    text-align:center;
+    margin-left:500px;
+    margin-top:10px;
+
+}
 .productosDestacados{
     padding-top:30px;
     display:grid;
@@ -320,8 +399,9 @@ main{
 .destacado{
     display:inline-block;
     /* width:30%; */
-    margin-bottom:50px;
+    margin-bottom:80px;
     transition: all 10s;
+    border:3px solid white;
 }
 
 .destacado:hover{
@@ -354,6 +434,18 @@ main{
 
 .institucional{
     width:100%;
+}
+
+.institucional__titulo{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-weight:bold;
+    font-size:32px;
+    padding-left: 20px;
+    margin-top:20px;
+    padding-top:20px;
+    padding-bottom:40px;
+    text-align:center;
 }
 
 .institucional iframe{
@@ -401,7 +493,7 @@ main{
     /* display: inline-block;
     width:30%;
     margin:20px; */
-    background:gray;
+    background:black;
 } 
 
 
@@ -421,11 +513,13 @@ main{
     };
     font-family: 'Roboto', sans-serif;
     font-size:24px;
+    padding-left:20px;
 }
 
 .producto__precio{
     display:none;
     color:yellow;
+    padding-left:20px;
 }
 
 .producto:hover .producto__nombre{
@@ -455,6 +549,7 @@ main{
     /* gap:10px; */
     /* border:1px solid black; */
     /* padding:20px; */
+    margin-bottom:100px;
 }
 
 .contacto{
@@ -503,6 +598,12 @@ main{
     }
 }
 
+@media (max-width:992px){
+    .contactoNewsletter__input{
+        width:650px;
+    }
+}
+
 @media (max-width:768px){ 
     .institucional iframe{
         width:80%;
@@ -523,6 +624,13 @@ main{
     .contenedorQuienesSomos{
         height:150vh;
     }
+    .contactoNewsletter__input{
+        width:500px;
+        margin-left:60px;
+    }
+    .contacto__boton{
+        margin-left:0px;
+    }
 
 }
 
@@ -533,12 +641,21 @@ main{
     .listasProductos{
         grid-template-columns:repeat(1,1fr) ;
     }
+    .contactoNewsletter__input{
+        width:400px;
+        margin-left:110px;
+    }
 }
 
 @media (max-width:480px){
 
-    #footer{ 
+    .finalFooter{ 
         flex-direction: column;   
+    }
+
+    .contactoNewsletter__input{
+        width:200px;
+        margin-left:200px;
     }
 
 }
